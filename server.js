@@ -6,7 +6,7 @@ const app = express();
 
 // Connect Database
 connectDB();
-
+app.use(express.json({ extended: false })); // now can accept body data
 app.get('/', (req, res) => res.json({msg: "Mission task"}));
 
 // Define Routes
