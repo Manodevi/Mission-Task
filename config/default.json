@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://manomission:pass_123456@cluster0.d8mzv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+}
