@@ -1,0 +1,10 @@
+export const SET_LOADING = 'SET_LOADING';
+export const GET_MISSIONS = 'GET_MISSIONS';
+export const GET_MISSION = 'GET_MISSION';
+export const ADD_MISSION = 'ADD_MISSION';
+export const CLEAR_MISSION = 'CLEAR_MISSION';
+export const DELETE_MISSION = 'DELETE_MISSION';
+export const UPDATE_MISSION = 'UPDATE_MISSION';
+export const GET_TASKS = 'GET_TASKS';
+export const SET_ALERT = 'SET_ALERT';
+export const REMOVE_ALERT = 'REMOVE_ALERT';   
