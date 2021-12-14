@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
+
+/* Global Styles */
+:root {
+  --background-color: #1a283f;
+  --primary-color: #29394f;
+  --border-color: teal;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: #acb9c6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a, a:hover {
+  text-decoration: none;
+  color: #acb9c6;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {  
+  margin: 0 auto;
+  height: 100vh;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 2%;
+  width: 100% !important;
+}
+
+.main_container {
+  margin: 0 auto;
+  /* max-width: 1100px; */
+  max-width: 790px;
+  /* height: 100%; */
+}
+
+.missions_title {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.7rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.missions_list {
+  display: flex;  
+  justify-content: flex-start;
+  row-gap: 1.5rem;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.missions_list div.list_block {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid teal;
+  border-radius: 5%;
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 2px 1px var(--border-color);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.missions_list div.list_block:hover {
+  box-shadow: 0px 0px 2px 3px var(--border-color);
+  font-size: 1.2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.missionBtn {  
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #acb9c6;
+    padding: 0.4rem 1.3rem;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: opacity 0.2s ease-in;
+    outline: none;
+    border-radius: 5px;
+}
+
+.missionBtn, .missionBtn:hover, .missionBtn:focus, .missionBtn:active {  
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.alert-success {
+  color: var(--border-color);
+  border-color: var(--border-color);
+  background-color: var(--primary-color);
+  margin: 1rem 2rem 0;
+}
+
+.items_right {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 0.5rem;
+}
+
+.mission_tabs {  
+  display: flex;
+}
+
+.mission_tab {
+  background: none;  
+  color: var(--border-color);
+  padding: 1rem 1rem 0 1rem;
+  border: none;
+  box-shadow: 0px 2px var(--border-color);
+  /* border: 0px 0px 1px solid var(--border-color);   */
+  /* box-shadow: 0px 0px 2px 1px var(--border-color); */
+}
+
+.tab_active {
+  color: #acb9c6;
+  font-weight: bold;
+  border: 1px solid var(--border-color);
+  box-shadow: 1px -1px 0px 1px var(--border-color);
+  border-bottom-color: var(--background-color);
+  /* box-shadow: 0px 0px 2px 1px var(--border-color); */
+  /* border: 1px solid var(--border-color);  
+  border-bottom: 0px; */  
+}
+
+.empty_tab {  
+  box-shadow: 0px 2px var(--border-color);
+  flex-grow: 1;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  border-top: 1px solid var(--primary-color);
+}
+
+.table>thead>tr>th {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.table {
+  margin-top: 1rem;
+}
+
+.items_right .missionBtn-icon {
+  background: none;  
+}
+
+@media (max-width: 768px) {
+  .main_container {
+    max-width: 650px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Mobile styles */
+@media (max-width: 450px) {
+  .missions_list {
+    justify-content: space-between;
+  }
+
+  .container {
+    height: auto;
   }
 }
